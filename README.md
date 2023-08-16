@@ -5,7 +5,7 @@
 
 In *prefix* notation, also known as Polish notation, the operator comes before the operands. This format eliminates the need for parentheses and has a fixed order of operations, making it easier to parse and evaluate expressions. However, it can be hard to read for complex expressions. 
 
-*Reverse Polish notation (RPN)*, also known as **Reverse Łukasiewicz notation**, is a way of writing mathematical expressions in which the operators come after the operands. For example, the infix expression "3 + 4" would be wriƩen in postfix notation as "3 4 +". In *postfix* notation, the order of operations is determined solely by the order of the operands and operators. The first operand encountered is used with the first operator encountered, and so on. 
+*Reverse Polish notation (RPN)*, also known as **Reverse Łukasiewicz notation**, is a way of writing mathematical expressions in which the operators come after the operands. For example, the infix expression "3 + 4" would be written in postfix notation as "3 4 +". In *postfix* notation, the order of operations is determined solely by the order of the operands and operators. The first operand encountered is used with the first operator encountered, and so on. 
 
 For example, the postfix expression "3 4 + 5 *" is evaluated as follows: 
 - Push 3 onto the stack. 
@@ -49,7 +49,7 @@ As you see this can be computationally expensive since “parenthesizing” the 
 - Define a function infixToPostfix that takes an infix expression as input and returns the equivalent postfix expression as output.
 - Initialize an empty string called result to store the postfix expression, and a stack called operators to store the operators. 
 - Iterate through each character of the input infix expression, and for each character, perform one of the following actions:
-    - If the character is an operand (a leƩer or a digit), append it to the result string. 
+    - If the character is an operand (a letter or a digit), append it to the result string. 
     - If the character is an opening parenthesis, push it onto the operators stack. 
     - If the character is a closing parenthesis, pop operators from the operators stack and append them to the result string until an opening parenthesis is found. Then pop the opening parenthesis from the operators stack.
     - If the character is an operator, pop operators from the operators stack and append them to the result string as long as the operator at the top of the stack has equal or higher precedence than the current operator. Then push the current operator onto the operators stack.
